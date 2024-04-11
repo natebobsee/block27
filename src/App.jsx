@@ -25,6 +25,8 @@ async function handleClick (evt) {
 
     if(!json.success) {
       setError(json.message);
+      console.log(json.message);
+      setError(json.message)
       return;
     }
      console.log(json.message);
@@ -71,7 +73,7 @@ async function handleSubmit(event) {
  </div>
 </form>
 <button onClick={handleClick}>Authenticate Token!</button>
-   {Message}
+   {Message}{error}
     </>
   )
 }
